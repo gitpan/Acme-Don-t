@@ -1,0 +1,6 @@
+Revision history for Perl extension Acme::Don't.
+
+1.00  Wed May  1 15:13:31 2002
+	- original version; created by h2xs 1.20 with options
+		-A -P -X -f -n Acme::Don::t
+
