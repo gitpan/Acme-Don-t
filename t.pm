@@ -1,8 +1,8 @@
-package Acme::Don't;
+package Acme::Don::t;
 
-$VERSION = '1.00';
+$VERSION = '1.01';
 
-sub don't (&) {};
+sub don't (&) {}
 
 1;
 __END__
@@ -13,8 +13,8 @@ Acme::Don't - The opposite of C<do>
 
 =head1 VERSION
 
-This document describes version 1.00 of Acme::Don't,
-released May  1, 2002.
+This document describes version 1.01 of Acme::Don::t,
+released May  3, 2002.
 
 =head1 SYNOPSIS
 
@@ -49,10 +49,46 @@ the security of compile-time syntax checking.
 
 =head1 LIMITATIONS
 
+=over
+
+=item *
+
 Doesn't (yet) implement the opposite of C<do STRING>. 
 The current workaround is to use:
 
     don't {"filename"};
+
+=item *
+
+The construct:
+
+    don't { don't { ... } }
+
+isn't (yet) equivalent to:
+
+    do { ... }
+
+because the outer C<don't> prevents the inner C<don't> from being executed,
+before the inner C<don't> gets the chance to discover that it actually
+I<should> execute.
+
+This is an issue of semantics. C<don't...> doesn't mean C<do the opposite of...>; it means C<do nothing with...>.
+
+In other words, doin nothing about doing nothing does...nothing.
+
+=item * 
+
+You can't (yet) use a:
+
+    don't { ... } unless condition();
+
+as a substitute for:
+
+    do { ... } if condition();
+
+Again, it's an issue of semantics. C<don't...unless...> doesn't mean C<do the opposite of...if...>; it means C<do nothing with...if not...>.
+
+=back
 
 =head1 AUTHOR
 

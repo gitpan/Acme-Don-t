@@ -1,5 +1,5 @@
 ==============================================================================
-                    Release of version 1.00 of Acme::Don't
+                   Release of version 1.01 of Acme::Don::t
 ==============================================================================
 
 
@@ -32,15 +32,21 @@ COPYRIGHT
 
 ==============================================================================
 
-CHANGES IN VERSION 1.00
+CHANGES IN VERSION 1.01
 
-(No changes have been documented for this version)
+
+	- Forwent some elegance in the code in order to support
+	  certain platforms that can::t handle apostrophes in
+	  filenames without running home in tears to mamma.
+
+	- Documented limitations and semantics better
+
 
 ==============================================================================
 
 AVAILABILITY
 
-Acme::Don't has been uploaded to the CPAN
+Acme::Don::t has been uploaded to the CPAN
 and is also available from:
 
 	http://www.csse.monash.edu.au/~damian/CPAN/Acme-Don-t.tar.gz
